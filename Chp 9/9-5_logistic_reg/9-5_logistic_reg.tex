@@ -413,7 +413,6 @@ Simple interpretation is only possible in terms of log odds and log odds ratios 
 {\tiny
 \begin{verbatim}
 summary(glm(Status ~ Age + Sex, data=donner, family=binomial))
-
 ## Call:
 ## glm(formula = Status ~ Age + Sex, family = binomial, data = donner)
 ## 
@@ -423,7 +422,6 @@ summary(glm(Status ~ Age + Sex, data=donner, family=binomial))
 ## Age         -0.07820    0.03728  -2.097   0.0359 *
 ## SexFemale    1.59729    0.75547   2.114   0.0345 *
 ## ---
-## 
 ## (Dispersion parameter for binomial family taken to be 1)
 ## 
 ##     Null deviance: 61.827  on 44  degrees of freedom
@@ -433,7 +431,7 @@ summary(glm(Status ~ Age + Sex, data=donner, family=binomial))
 ## Number of Fisher Scoring iterations: 4
 \end{verbatim}
 }
-
+\vspace{-1em}
 \hl{Gender slope}: When the other predictors are held constant this is the log odds ratio between the given level (Female) and the reference level (Male).
 
 \end{frame}
@@ -610,7 +608,7 @@ Log odds ratio:
 \pause
 
 Odds ratio:
-\[ \exp(CI) = (\exp{-0.1513}, \exp{-0.0051}) = (0.8596 0.9949) \]
+\[ \exp(CI) = (\exp{-0.1513}, \exp{-0.0051}) = (0.8596, 0.9949) \]
 
 
 \end{frame}
