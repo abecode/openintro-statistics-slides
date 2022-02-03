@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Slide options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Option 1: Slides with solutions
+
+%% \documentclass[slidestop,compress,mathserif]{beamer}
+%% \newcommand{\soln}[1]{\textit{#1}}
+%% \newcommand{\solnGr}[1]{#1}
+
+% Option 2: Handouts without solutions
+
+\documentclass[11pt,containsverbatim,handout]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+\newcommand{\soln}[1]{ }
+\newcommand{\solnGr}{ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% smart nested imports
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{import} % deals with relative paths in nested inputs
+                    % (change \input in openintro slides to \import
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{lec_style.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Lecture 1}
+\subtitle[Chp 1: Intro. to data]{Chapter 1: Introduction to data}
+\author{OpenIntro Statistics, 4th Edition}
+\institute{$\:$ \\ {\footnotesize Slides developed by Mine \c{C}etinkaya-Rundel of OpenIntro. \\
+The slides may be copied, edited, and/or shared via the \webLink{http://creativecommons.org/licenses/by-sa/3.0/us/}{CC BY-SA license.} \\
+Some images may be included under fair use guidelines (educational purposes). \\
+Modifications by Abe Kazemzadeh, available on \webLink{https://github.com/abecode/openintro-statistics-slides}{Github fork.} \\
+}}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\addtocounter{framenumber}{-1} 
+{\removepagenumbers 
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{OpenIntro_Grid_4_3-01.jpg}}
+\begin{frame}
+
+\includegraphics[width=20mm]{oiLogo_highres}  \hfill \includegraphics[width=60mm]{ust} 
+
+\titlepage
+
+\end{frame}
+}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\import{}{lecture01_ch1}
+\import{"Chp 1/1-1_case_study/"}{"1-1_case_study"}
+\import{"Chp 1/1-2_data_basics/"}{"1-2_data_basics_fix"}
+\import{"Chp 1/1-3_sampling_principles_strategies/"}{"1-3_sampling_principles_strategies_fix"}
+\import{"Chp 1/1-4_experiments/"}{"1-4_experiments_fix"}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
